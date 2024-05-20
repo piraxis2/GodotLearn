@@ -9,9 +9,10 @@ void vertex() {
 
 void fragment() {
 	// Called for every pixel the material is visible on.
-	vec4 multiply_color = texture(mask2D,UV);
+	vec4 mask2D_color = texture(mask2D,UV);
 	vec4 color = texture(TEXTURE,UV);
-	COLOR = vec4(color.r,color.g,color.b,multiply_color.a == 1.0 ? color.a : 0.0);
+	color.a = mask2D_color.a;
+	COLOR = color;
 }
 
 //void light() {

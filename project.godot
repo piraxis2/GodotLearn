@@ -14,6 +14,10 @@ config/name="learn"
 config/features=PackedStringArray("4.2", "C#", "Forward Plus")
 config/icon="res://Assets/Texture/icon.svg"
 
+[autoload]
+
+TacticsManager="*res://Script/Tactics/TacticsManager.cs"
+
 [dotnet]
 
 project/assembly_name="learn"
